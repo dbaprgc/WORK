@@ -1,0 +1,14 @@
+LOAD DATA TRUNCATE INTO TABLE stocks.data FIELDS TERMINATED BY "," 
+TRAILING NULLCOLS(
+ TICKER
+	,DT CHAR "to_date(:dt, 'yyyy-mm-dd')"
+	,HIGH
+	,LOW
+	,Open
+	,CLOSE
+	,VOLUME
+	,ADJ_CLOSE
+	,CHANGE
+	,PCT_CHANGE
+)
+

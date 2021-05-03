@@ -1,0 +1,5 @@
+control=%ORACLE_WORK%\control\stocks.ctl
+log=%ORACLE_WORK%\data\stocks.log
+bad=%ORACLE_WORK%\data\stocks.bad
+data=%ORACLE_WORK%\data\stocks.csv
+direct=true

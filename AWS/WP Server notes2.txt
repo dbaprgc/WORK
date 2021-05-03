@@ -1,0 +1,7 @@
+DB Instance ID:  wordpress
+DB Name       :  wordpress_db
+DB Endpoint   :  wordpress.cmkbayhqvejd.us-east-1.rds.amazonaws.com
+
+EC2 Public IP :  54.92.189.159
+
+EC2 user/pw for WP updates etc:  rick/asdf4444

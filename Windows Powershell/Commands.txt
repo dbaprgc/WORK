@@ -1,0 +1,3 @@
+# Count number of files recursively in a directory
+
+PS F:\> (Get-ChildItem -Recurse | Measure-Object).count

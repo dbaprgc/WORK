@@ -1,0 +1,23 @@
+1. Launch the file system (EFS Service) with the following Bootstap to install the "amazon-efs-utils" package:
+
+	yum update -y
+	yum install httpd -y
+	yum install amazon-efs-utils -y
+
+2. Launch 2 or more EC2 Instances that will be using the EFS
+
+3. After the EC2 instances and file systems are available
+    
+    a. Log into each EC2 instance and mount the shared file directory so that both instances keep that directory in-sync
+
+		[root@ip-172-31-63-75 www]# mount -t efs -o tls <file-system-name>:/ <shared-directory>
+
+		Example:
+
+		[root@ip-172-31-63-75 www]#mopunt -t efs -o tls fs-d8fbee5b:/ /var/www/html
+
+
+****  Also need to add this to the VPC default security group to open port 2049 for NFS
+
+     NFS	TCP	 2049	sg-0b642c469fd4d14a2 (WebDMZ)
+

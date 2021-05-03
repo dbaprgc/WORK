@@ -1,0 +1,19 @@
+CREATE PLUGGABLE DATABASE salespdb 
+ADMIN USER salesadm IDENTIFIED BY password
+ROLES = (dba)
+DEFAULT TABLESPACE sales 
+DATAFILE 'C:\app\oracle\oradata\ORCL\salespdb\sales01.dbf' SIZE 50M AUTOEXTEND ON
+PATH_PREFIX = 'C:\app\oracle\oradata\ORCL\salespdb\'
+FILE_NAME_CONVERT=('C:\app\oracle\oradata\ORCL\pdbseed\','C:\app\oracle\oradata\ORCL\salespdb\');
+
+select con_id, name, open_mode from v$pdbs;
+
+ALTER PLUGGABLE DATABASE salespdb OPEN READ WRITE;
+
+connect salesadm/password@localhost:1521/salespdb 
+
+show con_name
+
+alter user salesadm quota unlimited on sales;
+
+@"C:\Users\dbapr\OneDrive\Documents\Training\Oracle\LinkedInLearning\Ex_Files_Oracle12c_NewFeatures\Exercise Files\sales_data.sql"

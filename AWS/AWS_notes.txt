@@ -1,0 +1,25 @@
+# stress test EC2 - infinite loop
+$ while true; do echo; done
+
+---- SSH from Command prompt
+
+C:\Users\dbapr\OneDrive\Documents\Training\AWS>ssh ec2-user@3.137.167.167 -i KeyPair-20200925.pem
+The authenticity of host '3.137.167.167 (3.137.167.167)' can't be established.
+ECDSA key fingerprint is SHA256:uXimAnYfVHLCrr7SB4qhw+E1W9JzN5a7Uk9xMMsf9Ww.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '3.137.167.167' (ECDSA) to the list of known hosts.
+Last login: Sat Sep 26 00:44:12 2020 from ec2-3-16-146-1.us-east-2.compute.amazonaws.com
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+Last login: Sat Sep 26 00:44:12 2020 from ec2-3-16-146-1.us-east-2.compute.amazonaws.com
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-10-0-1-40 ~]$
+
+
