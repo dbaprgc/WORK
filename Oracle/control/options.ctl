@@ -11,7 +11,8 @@ TRAILING NULLCOLS(
 	LAST_OPT_PRICE , 
     CONTRACTS ,
     PREMIUM,
-    COMMISSION
+    COMMISSION,
+    INSERT_DATE "to_char(:insert_date, trunc(sysdate))"
 )
 
 

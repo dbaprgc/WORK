@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 19.0.0.0.0 - Production on Tue May 4 08:46:54 2021
+SQL*Loader: Release 19.0.0.0.0 - Production on Tue May 4 09:26:32 2021
 Version 19.3.0.0.0
 
 Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
@@ -38,6 +38,8 @@ LAST_OPT_PRICE                       NEXT     *   ,       CHARACTER
 CONTRACTS                            NEXT     *   ,       CHARACTER            
 PREMIUM                              NEXT     *   ,       CHARACTER            
 COMMISSION                           NEXT     *   ,       CHARACTER            
+INSERT_DATE                          NEXT     *   ,       CHARACTER            
+    SQL string for column : "to_char(:insert_date, trunc(sysdate))"
 
 Record 10: Discarded - failed all WHEN clauses.
 Record 11: Discarded - failed all WHEN clauses.
@@ -90,7 +92,7 @@ Table STOCKS.OPTIONS:
   0 Rows not loaded because all fields were null.
 
 
-Space allocated for bind array:                 774000 bytes(250 rows)
+Space allocated for bind array:                 838500 bytes(250 rows)
 Read   buffer bytes: 1048576
 
 Total logical records skipped:          0
@@ -98,8 +100,8 @@ Total logical records read:            17
 Total logical records rejected:        13
 Total logical records discarded:        4
 
-Run began on Tue May 04 08:46:54 2021
-Run ended on Tue May 04 08:46:54 2021
+Run began on Tue May 04 09:26:32 2021
+Run ended on Tue May 04 09:26:32 2021
 
-Elapsed time was:     00:00:00.44
-CPU time was:         00:00:00.11
+Elapsed time was:     00:00:00.53
+CPU time was:         00:00:00.22
