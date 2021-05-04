@@ -1,5 +1,5 @@
 
-SQL*Loader: Release 19.0.0.0.0 - Production on Tue May 4 00:05:36 2021
+SQL*Loader: Release 19.0.0.0.0 - Production on Tue May 4 08:46:54 2021
 Version 19.3.0.0.0
 
 Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
@@ -18,78 +18,76 @@ Bind array:     250 rows, maximum of 1048576 bytes
 Continuation:    none specified
 Path used:      Conventional
 
-Table STOCKS.OPTIONS, loaded from every logical record.
+Table STOCKS.OPTIONS, loaded when DT_BOUGHT != BLANKS
 Insert option in effect for this table: APPEND
 TRAILING NULLCOLS option in effect
 
    Column Name                  Position   Len  Term Encl Datatype
 ------------------------------ ---------- ----- ---- ---- ---------------------
-TICKER                              FIRST     *   ,       CHARACTER            
-DT_BOUGHT                            NEXT     *   ,       CHARACTER            
+DT_BOUGHT                           FIRST     *   ,       CHARACTER            
     SQL string for column : "to_date(:dt_bought, 'yyyy-mm-dd')"
 ACCOUNT                              NEXT     *   ,       CHARACTER            
 SYMBOL                               NEXT     *   ,       CHARACTER            
 TYPE                                 NEXT     *   ,       CHARACTER            
 EXPIRATION                           NEXT     *   ,       CHARACTER            
+    SQL string for column : "to_date(:expiration, 'yyyy-mm-dd')"
 STRIKE                               NEXT     *   ,       CHARACTER            
 SHARE_PRICE                          NEXT     *   ,       CHARACTER            
 BUY_OPT_PRICE                        NEXT     *   ,       CHARACTER            
 LAST_OPT_PRICE                       NEXT     *   ,       CHARACTER            
 CONTRACTS                            NEXT     *   ,       CHARACTER            
 PREMIUM                              NEXT     *   ,       CHARACTER            
+COMMISSION                           NEXT     *   ,       CHARACTER            
 
-Record 12: Discarded - all columns null.
+Record 10: Discarded - failed all WHEN clauses.
+Record 11: Discarded - failed all WHEN clauses.
+Record 12: Discarded - failed all WHEN clauses.
+Record 13: Discarded - failed all WHEN clauses.
 Record 1: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
 ORA-01841: (full) year must be between -4713 and +9999, and not be 0
 
-Record 2: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+Record 2: Rejected - Error on table STOCKS.OPTIONS.
+ORA-00001: unique constraint (STOCKS.OPTIONS_PK) violated
 
-Record 3: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+Record 3: Rejected - Error on table STOCKS.OPTIONS.
+ORA-00001: unique constraint (STOCKS.OPTIONS_PK) violated
 
-Record 4: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+Record 4: Rejected - Error on table STOCKS.OPTIONS.
+ORA-00001: unique constraint (STOCKS.OPTIONS_PK) violated
 
-Record 5: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+Record 5: Rejected - Error on table STOCKS.OPTIONS.
+ORA-00001: unique constraint (STOCKS.OPTIONS_PK) violated
 
-Record 6: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+Record 6: Rejected - Error on table STOCKS.OPTIONS.
+ORA-00001: unique constraint (STOCKS.OPTIONS_PK) violated
 
-Record 7: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+Record 7: Rejected - Error on table STOCKS.OPTIONS.
+ORA-00001: unique constraint (STOCKS.OPTIONS_PK) violated
 
-Record 8: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+Record 8: Rejected - Error on table STOCKS.OPTIONS.
+ORA-00001: unique constraint (STOCKS.OPTIONS_PK) violated
 
-Record 9: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01841: (full) year must be between -4713 and +9999, and not be 0
-
-Record 11: Rejected - Error on table STOCKS.OPTIONS, column CONTRACTS.
-ORA-01722: invalid number
-
-Record 13: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+Record 9: Rejected - Error on table STOCKS.OPTIONS.
+ORA-00001: unique constraint (STOCKS.OPTIONS_PK) violated
 
 Record 14: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01843: not a valid month
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
 
 Record 15: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01843: not a valid month
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
 
 Record 16: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01843: not a valid month
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
 
 Record 17: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
-ORA-01843: not a valid month
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
 
 
 Table STOCKS.OPTIONS:
-  1 Row successfully loaded.
-  15 Rows not loaded due to data errors.
-  0 Rows not loaded because all WHEN clauses were failed.
-  1 Row not loaded because all fields were null.
+  0 Rows successfully loaded.
+  13 Rows not loaded due to data errors.
+  4 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
 
 
 Space allocated for bind array:                 774000 bytes(250 rows)
@@ -97,11 +95,11 @@ Read   buffer bytes: 1048576
 
 Total logical records skipped:          0
 Total logical records read:            17
-Total logical records rejected:        15
-Total logical records discarded:        1
+Total logical records rejected:        13
+Total logical records discarded:        4
 
-Run began on Tue May 04 00:05:36 2021
-Run ended on Tue May 04 00:05:37 2021
+Run began on Tue May 04 08:46:54 2021
+Run ended on Tue May 04 08:46:54 2021
 
-Elapsed time was:     00:00:01.36
+Elapsed time was:     00:00:00.44
 CPU time was:         00:00:00.11
