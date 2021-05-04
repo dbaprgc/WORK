@@ -1,0 +1,107 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Tue May 4 00:05:36 2021
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\WORK\oracle\control\options.ctl
+Data File:      C:\Users\dbapr\OneDrive\Documents\open options.csv
+  Bad File:     C:\WORK\oracle\data\options.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table STOCKS.OPTIONS, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+TICKER                              FIRST     *   ,       CHARACTER            
+DT_BOUGHT                            NEXT     *   ,       CHARACTER            
+    SQL string for column : "to_date(:dt_bought, 'yyyy-mm-dd')"
+ACCOUNT                              NEXT     *   ,       CHARACTER            
+SYMBOL                               NEXT     *   ,       CHARACTER            
+TYPE                                 NEXT     *   ,       CHARACTER            
+EXPIRATION                           NEXT     *   ,       CHARACTER            
+STRIKE                               NEXT     *   ,       CHARACTER            
+SHARE_PRICE                          NEXT     *   ,       CHARACTER            
+BUY_OPT_PRICE                        NEXT     *   ,       CHARACTER            
+LAST_OPT_PRICE                       NEXT     *   ,       CHARACTER            
+CONTRACTS                            NEXT     *   ,       CHARACTER            
+PREMIUM                              NEXT     *   ,       CHARACTER            
+
+Record 12: Discarded - all columns null.
+Record 1: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 2: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 3: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 4: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 5: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 6: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 7: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 8: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 9: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 11: Rejected - Error on table STOCKS.OPTIONS, column CONTRACTS.
+ORA-01722: invalid number
+
+Record 13: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 14: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01843: not a valid month
+
+Record 15: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01843: not a valid month
+
+Record 16: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01843: not a valid month
+
+Record 17: Rejected - Error on table STOCKS.OPTIONS, column DT_BOUGHT.
+ORA-01843: not a valid month
+
+
+Table STOCKS.OPTIONS:
+  1 Row successfully loaded.
+  15 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  1 Row not loaded because all fields were null.
+
+
+Space allocated for bind array:                 774000 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:            17
+Total logical records rejected:        15
+Total logical records discarded:        1
+
+Run began on Tue May 04 00:05:36 2021
+Run ended on Tue May 04 00:05:37 2021
+
+Elapsed time was:     00:00:01.36
+CPU time was:         00:00:00.11

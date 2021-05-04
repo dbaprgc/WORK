@@ -1,0 +1,5 @@
+control=%WORK%\oracle\control\options.ctl
+log=%WORK%\oracle\data\options.log
+bad=%WORK%\oracle\data\options.bad
+data="C:\Users\dbapr\OneDrive\Documents\open options.csv"
+#direct=true

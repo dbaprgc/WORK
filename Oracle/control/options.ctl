@@ -1,0 +1,17 @@
+LOAD DATA APPEND INTO TABLE stocks.options FIELDS TERMINATED BY "," 
+TRAILING NULLCOLS(
+TICKER , 
+	DT_BOUGHT "to_date(:dt_bought, 'yyyy-mm-dd')", 
+	ACCOUNT , 
+    	SYMBOL ,
+        	TYPE ,
+	EXPIRATION , 
+	STRIKE , 
+	SHARE_PRICE , 
+	BUY_OPT_PRICE , 
+	LAST_OPT_PRICE , 
+    CONTRACTS ,
+    PREMIUM 
+)
+
+
